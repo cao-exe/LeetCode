@@ -9,7 +9,7 @@ class Solution(object):
         for i in range(1, len(prices)):
             if prices[i] < lowest:
                 lowest = prices[i]
-            elif prices[i] - lowest > max_profit:
+            if prices[i] - lowest > max_profit:
                 max_profit = prices[i] - lowest
         return max_profit
                 

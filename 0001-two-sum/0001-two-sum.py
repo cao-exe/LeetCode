@@ -5,12 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        seen = {}
         for i in range(len(nums)):
             curr = nums[i]
-            subtarget = target - curr
-            for j in range(i+1,len(nums)):
-                if nums[j] == subtarget and i != j:
-                    indexes = [i,j]
+            diff = target - curr
+            if diff in seen:
+                indexes = [i, seen[diff]]
+            else: 
+                seen[curr] = i 
 
         return indexes
 

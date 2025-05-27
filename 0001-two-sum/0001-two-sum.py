@@ -8,7 +8,7 @@ class Solution(object):
         for i in range(len(nums)):
             curr = nums[i]
             subtarget = target - curr
-            for j in range(len(nums)):
+            for j in range(i+1,len(nums)):
                 if nums[j] == subtarget and i != j:
                     indexes = [i,j]
 

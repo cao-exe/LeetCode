@@ -10,10 +10,8 @@ class Solution(object):
             curr = nums[i]
             diff = target - curr
             if diff in seen:
-                indexes = [i, seen[diff]]
+                return [i, seen[diff]]
             else: 
                 seen[curr] = i 
-
-        return indexes
 
         

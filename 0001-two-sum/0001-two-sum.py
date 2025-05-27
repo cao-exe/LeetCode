@@ -13,5 +13,6 @@ class Solution(object):
                 return [i, seen[diff]]
             else: 
                 seen[curr] = i 
+        return []
 
         
